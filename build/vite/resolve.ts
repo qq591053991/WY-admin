@@ -4,7 +4,7 @@ import type { ResolveOptions, AliasOptions } from 'vite';
 type myResolveOptions = ResolveOptions & { alias?: AliasOptions };
 
 export function createViteResolve(myDirname: string): myResolveOptions {
-    const viteResolve: myResolveOptions = {
+    const ResolveConfig: myResolveOptions = {
         // 引用别名配置
         alias: {
             // 配置@别名
@@ -16,5 +16,5 @@ export function createViteResolve(myDirname: string): myResolveOptions {
         extensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
     };
 
-    return viteResolve;
+    return ResolveConfig;
 }
